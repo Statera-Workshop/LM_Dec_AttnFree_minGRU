@@ -1,0 +1,28 @@
+{
+ "model": "mingru",
+ "repo": "(new) lucidrains/minGRU-pytorch 0.2.1",
+ "target_repo": "LM_Dec_AttnFree_minGRU",
+ "category": "AttnFree",
+ "upstream": "lucidrains/minGRU-pytorch (MIT), pip 0.2.1",
+ "unified": [
+  "minLM defaults (expansion 1.5, ff_mult 4, no conv)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "verify5",
+ "started": "2026-10-21 07:11:29",
+ "smoke": false,
+ "rows": {
+  "512": {
+   "normal": 0.01611328125,
+   "values": 0.017822265625,
+   "keys": 0.017578125
+  },
+  "2048": {
+   "normal": 0.013671875,
+   "values": 0.012939453125,
+   "keys": 0.012939453125
+  }
+ },
+ "seconds": 7.3
+}
