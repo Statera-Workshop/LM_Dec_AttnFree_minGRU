@@ -1,0 +1,50 @@
+{
+ "model": "mingru",
+ "repo": "(new) lucidrains/minGRU-pytorch 0.2.1",
+ "target_repo": "LM_Dec_AttnFree_minGRU",
+ "category": "AttnFree",
+ "upstream": "lucidrains/minGRU-pytorch (MIT), pip 0.2.1",
+ "unified": [
+  "minLM defaults (expansion 1.5, ff_mult 4, no conv)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm08",
+ "started": "2026-11-09 19:52:57",
+ "smoke": false,
+ "steps": 6000,
+ "capped": false,
+ "bf16": true,
+ "final_bits": 3.3424456712660997,
+ "test": {
+  "512": {
+   "bits_full": 3.310087479471564
+  },
+  "2048": {
+   "bits_full": 3.293919390463951,
+   "bits_last512": 3.289865415417813,
+   "gain_from_history": -0.004053975046138358
+  },
+  "8192": {
+   "bits_full": 3.320052111266892,
+   "bits_last512": 3.309263553586943,
+   "gain_from_history": -0.010788557679949129
+  }
+ },
+ "config": {
+  "train_len": 512,
+  "test_lens": [
+   512,
+   2048,
+   8192
+  ],
+  "batch": 16,
+  "steps": 6000,
+  "eval_every": 1000,
+  "eval_samples": 64,
+  "tail": 256,
+  "max_hours": 1.5
+ },
+ "minutes": 9.8,
+ "seconds": 590.7
+}
